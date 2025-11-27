@@ -1,0 +1,17 @@
+;从键盘接收一个字符串（假定输入长度大于3），试换行输出该字符串中第二个字符开始的连续2个字符。
+DATA SEGMENT
+    STR1 DB 'PLEASE ENTER A STRING.$'
+    STR2 DB 20,?,20 DUP(?)
+DATA ENDS
+CODE SEGMENT
+    ASSUME DS:DATA,CS:CODE
+START:
+    MOV AX, DATA
+    MOV DS, AX
+
+	
+    ;程序结束
+    MOV AX, 4C00H
+    INT 21H
+CODE ENDS
+END START

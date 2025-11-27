@@ -1,0 +1,20 @@
+;从键盘接收两个不大于5的十进制数字，并以数据形式显示其和。 
+DATA SEGMENT
+    X DB ?
+    Y DB ?
+    STR1 DB 'PLEASE ENTER A NUMBER (0-4):$'
+DATA ENDS
+CODE SEGMENT
+ASSUME DS:DATA,CS:CODE
+START:
+    ; 设置数据段
+    MOV AX, DATA
+    MOV DS, AX
+
+	
+    MOV AX,4C00H
+    INT 21H
+CODE ENDS
+END START
+
+
